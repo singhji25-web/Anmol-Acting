@@ -16,12 +16,18 @@
   --color-star-dim: #a6a3bf; /* secondary text */
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Height of the fixed nav bar. Used by the nav itself (h-(--nav-h)) and by
+     scroll-padding-top below, so anchor links land exactly beneath it. */
+  --nav-h: 4rem;
 }
 
 html {
   scroll-behavior: smooth;
-  /* keep anchored sections clear of the fixed nav */
-  scroll-padding-top: 5rem;
+  /* Single source of anchor offset: in-page links (#reel, #resume, ...) land
+     with the section's top edge flush against the bottom of the fixed nav.
+     Do NOT also add scroll-margin-top on sections — the two stack. */
+  scroll-padding-top: var(--nav-h);
 }
 
 @media (prefers-reduced-motion: reduce) {

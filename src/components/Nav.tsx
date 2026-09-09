@@ -38,7 +38,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
+      <nav className="mx-auto flex h-(--nav-h) w-full max-w-5xl items-center justify-between px-5 sm:px-8">
         <a
           href="#top"
           className="text-sm font-semibold tracking-wide text-star hover:text-nebula-soft transition-colors"
