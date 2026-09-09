@@ -66,3 +66,66 @@ body {
     transparent 100%
   );
 }
+
+/* ---------------------------------------------------------------------------
+   Hero
+--------------------------------------------------------------------------- */
+
+/* Desktop portrait dissolves into the starfield along its bottom and left edges. */
+.hero-portrait {
+  /* Never taller than ~72% of the viewport (so it fits a 720px laptop), never
+     wider than its column; height follows width via the aspect ratio. */
+  --hero-portrait-h: min(72svh, 38rem);
+  width: min(100%, calc(var(--hero-portrait-h) * 3 / 4));
+  aspect-ratio: 3 / 4;
+  border-radius: 1.5rem;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 55%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 22%);
+  mask-image:
+    linear-gradient(to bottom, #000 55%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 22%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Scroll cue: a dot travelling down a thin track. */
+@keyframes hero-scroll-dot {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-scroll-dot {
+    animation: hero-scroll-dot 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
+
+/* Parallax: as the hero scrolls out, the portrait lags behind the copy and the
+   copy fades. Pure CSS scroll-driven animation — no JS, no scroll listeners.
+   Browsers without support simply get a static hero. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes hero-img-drift {
+      to { transform: translateY(18vh); }
+    }
+    @keyframes hero-bg-drift {
+      to { transform: translateY(12vh) scale(1.06); }
+    }
+    @keyframes hero-copy-fade {
+      to { transform: translateY(6vh); opacity: 0.15; }
+    }
+    .hero-parallax-img,
+    .hero-parallax-bg,
+    .hero-parallax-copy {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+    .hero-parallax-img  { animation-name: hero-img-drift; }
+    .hero-parallax-bg   { animation-name: hero-bg-drift; }
+    .hero-parallax-copy { animation-name: hero-copy-fade; }
+  }
+}

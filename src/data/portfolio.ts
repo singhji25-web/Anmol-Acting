@@ -15,6 +15,11 @@ export const profile = {
   bio: "Toronto-based actor working across film, television and stage. Trained in scene study and on-camera technique, with a focus on grounded, character-driven work.",
   // Shown as a mailto: link in the Contact section
   email: "anmolactor01@yahoo.com",
+  // Portrait used as the large visual in the hero (one of the gallery files)
+  heroImage: {
+    src: "/headshots/03.webp",
+    alt: "Anmol Singh — three-quarter portrait in a leather jacket",
+  },
   // Physical stats listed on the resume header
   stats: {
     height: "5'10\"",
