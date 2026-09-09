@@ -51,14 +51,13 @@ export default function Resume() {
           </ul>
         </div>
 
-        {/* PLACEHOLDER - drop a real PDF at /public/resume.pdf; the file included is a one-page sample */}
         <div className="mt-10 flex justify-center border-t border-white/10 pt-8">
           <a
             href="/resume.pdf"
             download
             className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-star transition hover:border-white/40 hover:bg-white/5"
           >
-            Download PDF resume
+            Download Resume
           </a>
         </div>
       </div>

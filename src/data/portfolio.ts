@@ -32,21 +32,16 @@ export const profile = {
 
 // -----------------------------------------------------------------------------
 // HEADSHOTS
-// PLACEHOLDER - replace each `src` with a real headshot, e.g. "/headshots/01.jpg"
-// placed in /public/headshots. Keep portrait (3:4) crops for a consistent grid.
+// Optimized WebP files in /public/headshots (1200x1500). To add more, drop the
+// original JPGs there and run `node scripts/optimize-headshots.mjs`.
 // -----------------------------------------------------------------------------
 export type Headshot = { src: string; alt: string; label: string };
 
-const ph = (bg: string, fg: string, text: string) =>
-  `https://placehold.co/900x1200/${bg}/${fg}.jpg?text=${encodeURIComponent(text)}&font=montserrat`;
-
 export const headshots: Headshot[] = [
-  { src: ph("1b1636", "d9d2f5", "Headshot 01"), alt: "Anmol Singh — theatrical headshot", label: "Theatrical" },
-  { src: ph("0f1a33", "cfd8f5", "Headshot 02"), alt: "Anmol Singh — commercial headshot", label: "Commercial" },
-  { src: ph("241636", "e3d3f0", "Headshot 03"), alt: "Anmol Singh — dramatic headshot", label: "Dramatic" },
-  { src: ph("101a2a", "d0d8e8", "Headshot 04"), alt: "Anmol Singh — three-quarter shot", label: "Three-quarter" },
-  { src: ph("1a1430", "d6cdf5", "Headshot 05"), alt: "Anmol Singh — editorial headshot", label: "Editorial" },
-  { src: ph("0d1424", "c9d4ea", "Headshot 06"), alt: "Anmol Singh — smiling headshot", label: "Smiling" },
+  { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie", label: "Theatrical" },
+  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie", label: "Commercial" },
+  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket", label: "Three-quarter" },
+  { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket", label: "Dramatic" },
 ];
 
 // -----------------------------------------------------------------------------

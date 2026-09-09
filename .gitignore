@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original full-size headshots (kept locally, only optimized .webp is committed)
+public/headshots/*.JPG
+public/headshots/*.jpg
+public/headshots/*.jpeg

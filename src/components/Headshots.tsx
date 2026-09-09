@@ -10,8 +10,7 @@ export default function Headshots() {
       title="Headshots"
       intro="High-resolution files available on request."
     >
-      {/* PLACEHOLDER - images come from placehold.co; swap `src` values in src/data/portfolio.ts */}
-      <ul className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-3 sm:gap-5">
         {headshots.map((shot, i) => (
           <li
             key={shot.src}
@@ -21,7 +20,7 @@ export default function Headshots() {
               src={shot.src}
               alt={shot.alt}
               fill
-              sizes="(min-width: 768px) 33vw, 50vw"
+              sizes="(min-width: 1024px) 512px, 50vw"
               priority={i < 2}
               className="object-cover transition duration-500 group-hover:scale-[1.03]"
             />
