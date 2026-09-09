@@ -17,8 +17,8 @@ export const profile = {
   email: "anmolactor01@yahoo.com",
   // Portrait used as the large visual in the hero (one of the gallery files)
   heroImage: {
-    src: "/headshots/03.webp",
-    alt: "Anmol Singh — three-quarter portrait in a leather jacket",
+    src: "/headshots/01.webp",
+    alt: "Anmol Singh — theatrical headshot in a white shirt and tie",
   },
   // Physical stats listed on the resume header
   stats: {
