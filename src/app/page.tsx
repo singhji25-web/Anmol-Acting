@@ -5,7 +5,6 @@ import Headshots from "@/components/Headshots";
 import DemoReel from "@/components/DemoReel";
 import Resume from "@/components/Resume";
 import Training from "@/components/Training";
-import Representation from "@/components/Representation";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -25,7 +24,6 @@ export default function Home() {
           <DemoReel />
           <Resume />
           <Training />
-          <Representation />
           <Contact />
         </div>
       </main>

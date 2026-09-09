@@ -22,12 +22,11 @@ grep -rn "PLACEHOLDER" src public next.config.ts
 
 | What | Where |
 | --- | --- |
-| Name, tagline, bio, email, socials, height/hair/eyes | `profile` in `src/data/portfolio.ts` |
+| Name, tagline, bio, email, socials, height/weight/eyes/hair | `profile` in `src/data/portfolio.ts` |
 | Headshots | `headshots[]` — drop JPGs into `public/headshots/` and set `src: "/headshots/01.jpg"` |
 | Demo reel | `demoReel.youtubeId` — the ID after `?v=` in the YouTube URL |
-| Film/TV, theatre, training, skills | `filmTv`, `theatre`, `resumeTraining`, `specialSkills` |
-| Workshops timeline | `workshops[]` |
-| Agency / agent contact | `representation` |
+| Special skills (grouped by category) | `specialSkills` |
+| Training & classes timeline | `workshops[]` |
 | PDF resume | replace `public/resume.pdf` |
 | Site URL for social previews | `metadataBase` in `src/app/layout.tsx` |
 
@@ -51,7 +50,7 @@ backend to maintain. To collect submissions instead, point the `<form action>` i
 src/
   app/          layout, page, global styles
   components/   Starfield, Nav, Hero, Headshots, DemoReel, Resume, Training,
-                Representation, Contact, Footer, Section (shared wrapper)
+                Contact, Footer, Section (shared wrapper)
   data/         portfolio.ts — all site content
 public/
   resume.pdf    placeholder PDF

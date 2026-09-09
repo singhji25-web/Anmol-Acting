@@ -30,7 +30,7 @@ export default function Contact() {
       id="contact"
       eyebrow="Contact"
       title="Get in touch"
-      intro="For general enquiries, collaborations or to request full scenes. For bookings, please go through representation."
+      intro="For bookings, auditions, collaborations or to request full scenes."
     >
       <div className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-6">

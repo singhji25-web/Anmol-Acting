@@ -11,12 +11,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Anmol Singh — Actor · Toronto",
   description:
-    "Official acting portfolio of Anmol Singh, a Toronto-based actor. Headshots, demo reel, resume, training and representation.",
+    "Official acting portfolio of Anmol Singh, a Toronto-based actor. Headshots, demo reel, resume and training.",
   // Deployed URL — used to resolve Open Graph / social preview links.
   metadataBase: new URL("https://anmol-acting.vercel.app"),
   openGraph: {
     title: "Anmol Singh — Actor · Toronto",
-    description: "Headshots, demo reel, resume and representation.",
+    description: "Headshots, demo reel, resume and training.",
     type: "website",
   },
 };

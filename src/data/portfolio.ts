@@ -3,7 +3,7 @@
  *  PORTFOLIO CONTENT
  *  Every piece of copy on the site lives here so it can be swapped in one place.
  *
- *  ⚠️  EVERYTHING BELOW MARKED "PLACEHOLDER" IS FICTIONAL EXAMPLE CONTENT.
+ *  ⚠️  ANYTHING BELOW MARKED "PLACEHOLDER" IS STILL EXAMPLE CONTENT.
  *      Replace with real material before launch.
  * =============================================================================
  */
@@ -20,12 +20,13 @@ export const profile = {
     { label: "Instagram", href: "https://instagram.com/" },
     { label: "IMDb", href: "https://www.imdb.com/" },
   ],
-  // PLACEHOLDER - physical stats commonly listed on acting resumes
+  // Physical stats listed on the resume header
   stats: {
     height: "5'10\"",
+    weight: "160 lbs",
+    eyes: "Black",
     hair: "Black",
-    eyes: "Brown",
-    unions: "Non-union", // e.g. "ACTRA Apprentice"
+    unions: "Non-Union",
   },
 };
 
@@ -63,112 +64,46 @@ export const demoReel = {
 
 // -----------------------------------------------------------------------------
 // RESUME
-// PLACEHOLDER - all credits below are fictional examples in standard resume format.
+// Credit lists (Film/TV, Theatre, Commercial) are intentionally omitted until
+// there are real credits to show. Add them back here when that changes.
 // -----------------------------------------------------------------------------
-export type Credit = {
-  title: string;
-  year: string;
-  role: string; // e.g. "Lead", "Supporting", "Principal"
-  detail: string; // director / production company / theatre
-};
+export type SkillGroup = { category: string; items: string[] };
 
-export const filmTv: Credit[] = [
-  { title: "The Quiet Hours", year: "2025", role: "Supporting", detail: "Feature Film — Dir. Jane Smith" },
-  { title: "North of Bloor", year: "2025", role: "Principal", detail: "TV Series, Ep. 4 — Dir. Robert Chen" },
-  { title: "Static", year: "2024", role: "Lead", detail: "Short Film — Dir. Priya Nair" },
-  { title: "Late Shift", year: "2024", role: "Supporting", detail: "Feature Film — Dir. Marcus Bell" },
-  { title: "Homecoming", year: "2023", role: "Lead", detail: "Short Film — Dir. Alicia Moreau" },
-];
-
-export const theatre: Credit[] = [
-  { title: "A Streetcar Named Desire", year: "2024", role: "Mitch", detail: "Example Theatre Company — Dir. Sarah Lee" },
-  { title: "Twelve Angry Jurors", year: "2023", role: "Juror #8", detail: "Sample Stage Collective — Dir. David Park" },
-];
-
-export const commercial = "Conflicts available upon request."; // standard resume line
-
-export const resumeTraining: { title: string; detail: string; years: string }[] = [
-  { title: "Scene Study", detail: "Coach Name", years: "2024–2025" },
-  { title: "On-Camera Technique", detail: "Example Acting Studio", years: "2024" },
-  { title: "Meisner Foundations", detail: "Instructor Name", years: "2023" },
-  { title: "Voice & Speech", detail: "Instructor Name", years: "2023" },
-];
-
-export const specialSkills: string[] = [
-  "Stage combat (unarmed, single sword)",
-  "Dialects: Neutral North American, Punjabi, Standard British",
-  "Languages: English (native), Punjabi (fluent), Hindi (conversational)",
-  "Improv",
-  "Valid G driver's licence",
-  "Swimming",
-  "Basketball",
-  "Guitar (intermediate)",
+export const specialSkills: SkillGroup[] = [
+  { category: "Sports", items: ["Soccer", "Volleyball"] },
+  { category: "Languages", items: ["Hindi", "Punjabi"] },
+  { category: "Accents", items: ["Indian", "Standard American", "Southern US"] },
 ];
 
 // -----------------------------------------------------------------------------
-// TRAINING & CLASSES (expanded view)
-// PLACEHOLDER - fictional workshops in the same style as the resume section.
+// TRAINING & CLASSES
 // -----------------------------------------------------------------------------
 export type Workshop = {
   title: string;
-  instructor: string;
+  instructor?: string;
   organization: string;
-  years: string;
+  years?: string;
   description?: string;
 };
 
 export const workshops: Workshop[] = [
   {
-    title: "Advanced Scene Study",
-    instructor: "Coach Name",
-    organization: "Example Acting Studio, Toronto",
-    years: "2024–2025",
-    description: "Ongoing weekly class focused on contemporary film and television text.",
+    title: "Casting Director Workshop",
+    instructor: "Lisa Parasyn",
+    organization: "ActorVan Studios",
   },
   {
-    title: "On-Camera Audition Technique",
-    instructor: "Instructor Name",
-    organization: "Sample Screen Academy",
-    years: "2024",
-    description: "Self-tape framing, cold reads and working with casting directors.",
+    title: "Acting Classes",
+    instructor: "Jim Daugherty",
+    organization: "RAW Acting Studio",
   },
   {
-    title: "Meisner Foundations",
-    instructor: "Instructor Name",
-    organization: "Placeholder Conservatory",
-    years: "2023",
-    description: "Repetition, emotional preparation and independent activities.",
+    title: "Acting Classes",
+    instructor: "Various instructors",
+    organization: "Indy Actor's Academy",
   },
   {
-    title: "Stage Combat Certification",
-    instructor: "Fight Director Name",
-    organization: "Example Stage Combat Society",
-    years: "2023",
-    description: "Unarmed and single sword — basic certification.",
-  },
-  {
-    title: "Improv Levels 1–3",
-    instructor: "Various",
-    organization: "Sample Comedy Theatre",
-    years: "2022–2023",
-  },
-  {
-    title: "Voice & Dialects Intensive",
-    instructor: "Instructor Name",
-    organization: "Placeholder Voice Studio",
-    years: "2023",
+    title: "6-Week Acting Course",
+    organization: "LB Studio",
   },
 ];
-
-// -----------------------------------------------------------------------------
-// REPRESENTATION
-// PLACEHOLDER - confirm contact details with the agency before publishing.
-// -----------------------------------------------------------------------------
-export const representation = {
-  agency: "Esprit Artists",
-  agent: "Marc Gaudet",
-  location: "Toronto, ON",
-  email: "bookings@example.com", // PLACEHOLDER
-  phone: "+1 (416) 555-0123", // PLACEHOLDER
-  website: "https://example.com", // PLACEHOLDER
-};

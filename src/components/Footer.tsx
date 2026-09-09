@@ -1,4 +1,4 @@
-import { profile, representation } from "@/data/portfolio";
+import { profile } from "@/data/portfolio";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +9,6 @@ export default function Footer() {
           © {year} {profile.name}. All rights reserved.
         </p>
         <p>
-          Represented by {representation.agency} ·{" "}
           <a href="#top" className="transition-colors hover:text-star">
             Back to top ↑
           </a>
