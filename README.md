@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anmol Singh — Acting Portfolio
 
-## Getting Started
+Single-page acting portfolio built with **Next.js 16**, **Tailwind CSS v4** and TypeScript.
+Dark space/galaxy theme with a subtle animated starfield. Mobile-first, ready for Vercel.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (what Vercel runs)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Swapping in real content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All copy lives in **`src/data/portfolio.ts`**. Everything fictional is tagged
+`PLACEHOLDER` — find every spot with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+grep -rn "PLACEHOLDER" src public next.config.ts
+```
 
-## Learn More
+| What | Where |
+| --- | --- |
+| Name, tagline, bio, email, socials, height/hair/eyes | `profile` in `src/data/portfolio.ts` |
+| Headshots | `headshots[]` — drop JPGs into `public/headshots/` and set `src: "/headshots/01.jpg"` |
+| Demo reel | `demoReel.youtubeId` — the ID after `?v=` in the YouTube URL |
+| Film/TV, theatre, training, skills | `filmTv`, `theatre`, `resumeTraining`, `specialSkills` |
+| Workshops timeline | `workshops[]` |
+| Agency / agent contact | `representation` |
+| PDF resume | replace `public/resume.pdf` |
+| Site URL for social previews | `metadataBase` in `src/app/layout.tsx` |
 
-To learn more about Next.js, take a look at the following resources:
+Once real headshots are local files, the `placehold.co` entry in `next.config.ts` can be deleted.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Contact form
+The form opens the visitor's mail client with a pre-filled `mailto:` link, so there is no
+backend to maintain. To collect submissions instead, point the `<form action>` in
+`src/components/Contact.tsx` at a service like Formspree and remove the `onSubmit` handler.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy to Vercel (free tier)
 
-## Deploy on Vercel
+1. Push this repo to GitHub.
+2. Go to https://vercel.com/new, import the repo, keep the defaults (Framework: Next.js).
+3. Click **Deploy**. Every push to `main` redeploys automatically.
+4. Optional: add a custom domain under Project → Settings → Domains, then update `metadataBase`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/          layout, page, global styles
+  components/   Starfield, Nav, Hero, Headshots, DemoReel, Resume, Training,
+                Representation, Contact, Footer, Section (shared wrapper)
+  data/         portfolio.ts — all site content
+public/
+  resume.pdf    placeholder PDF
+```

@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Theme tokens — deep-space palette. Tailwind v4 reads these as utilities,
+   e.g. bg-space-950, text-star, border-nebula/30.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-space-950: #05060f;
+  --color-space-900: #0a0d1f;
+  --color-space-800: #121634;
+  --color-space-700: #1c2149;
+
+  --color-nebula: #7c6cf0; /* violet accent */
+  --color-nebula-soft: #b7adf7;
+  --color-star: #f2f1fa; /* primary text */
+  --color-star-dim: #a6a3bf; /* secondary text */
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
+  /* keep anchored sections clear of the fixed nav */
+  scroll-padding-top: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-space-950);
+  color: var(--color-star);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-nebula) 45%, transparent);
+}
+
+/* Galaxy-toned ambient gradients behind the starfield. */
+.galaxy-bg {
+  background:
+    radial-gradient(60% 45% at 15% 10%, rgba(76, 52, 140, 0.45), transparent 70%),
+    radial-gradient(50% 40% at 85% 25%, rgba(24, 40, 110, 0.4), transparent 70%),
+    radial-gradient(70% 50% at 50% 100%, rgba(50, 26, 90, 0.35), transparent 70%),
+    linear-gradient(180deg, #070a1a 0%, #05060f 100%);
+}
+
+/* Subtle top-to-bottom fade so content sections read cleanly over the stars. */
+.section-fade {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(5, 6, 15, 0.55) 12%,
+    rgba(5, 6, 15, 0.55) 88%,
+    transparent 100%
+  );
 }
