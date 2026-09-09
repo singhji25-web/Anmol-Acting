@@ -34,9 +34,9 @@ export type Headshot = { src: string; alt: string };
 
 export const headshots: Headshot[] = [
   { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie" },
-  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie" },
-  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket" },
   { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket" },
+  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket" },
+  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie" },
 ];
 
 // -----------------------------------------------------------------------------
