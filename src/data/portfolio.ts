@@ -30,28 +30,26 @@ export const profile = {
 // Optimized WebP files in /public/headshots (1200x1500). To add more, drop the
 // original JPGs there and run `node scripts/optimize-headshots.mjs`.
 // -----------------------------------------------------------------------------
-export type Headshot = { src: string; alt: string; label: string };
+export type Headshot = { src: string; alt: string };
 
 export const headshots: Headshot[] = [
-  { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie", label: "Theatrical" },
-  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie", label: "Commercial" },
-  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket", label: "Three-quarter" },
-  { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket", label: "Dramatic" },
+  { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie" },
+  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie" },
+  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket" },
+  { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket" },
 ];
 
 // -----------------------------------------------------------------------------
 // DEMO REEL
-// PLACEHOLDER - "Big Buck Bunny" (Creative Commons short) stands in for the real reel.
-// Swap `youtubeId` for the real reel's YouTube video ID (the part after ?v=).
+// `youtubeId` is the part after youtu.be/ or ?v= in the video URL.
 // -----------------------------------------------------------------------------
 export const demoReel = {
-  youtubeId: "aqz-KE-bpKQ",
-  title: "Anmol Singh — Demo Reel 2025",
-  runtime: "2:14", // PLACEHOLDER
+  youtubeId: "C-7Ho0-Tukk", // https://youtu.be/C-7Ho0-Tukk
+  title: "Anmol Singh — Demo Reel",
+  runtime: undefined as string | undefined, // e.g. "2:14" — shown next to the title when set
   // Prominent caption shown directly above the video player
   note: "Filmed before formal training/classes",
-  description:
-    "A selection of film and television work. Full scenes available on request.", // PLACEHOLDER
+  description: "Full scenes available on request.",
 };
 
 // -----------------------------------------------------------------------------
@@ -79,23 +77,8 @@ export type Workshop = {
 };
 
 export const workshops: Workshop[] = [
-  {
-    title: "Casting Director Workshop",
-    instructor: "Lisa Parasyn",
-    organization: "ActorVan Studios",
-  },
-  {
-    title: "Acting Classes",
-    instructor: "Jim Daugherty",
-    organization: "RAW Acting Studio",
-  },
-  {
-    title: "Acting Classes",
-    instructor: "Various instructors",
-    organization: "Indy Actor's Academy",
-  },
-  {
-    title: "6-Week Acting Course",
-    organization: "LB Studio",
-  },
+  { title: "Casting Director Workshop", instructor: "Lisa Parasyn", organization: "ActorVan Studios" },
+  { title: "Acting Classes", instructor: "Grisha", organization: "RAW Acting Studio" },
+  { title: "Acting Classes", instructor: "Jim Daugherty", organization: "Indy Actor's Academy" },
+  { title: "Acting Classes (6-Week Course)", instructor: "Caleigh Le Grand", organization: "LB Studio" },
 ];

@@ -2,7 +2,6 @@ import Section from "@/components/Section";
 import { demoReel } from "@/data/portfolio";
 
 export default function DemoReel() {
-  // PLACEHOLDER - youtubeId points to a Creative Commons sample video; set the real reel ID in src/data/portfolio.ts
   const src = `https://www.youtube-nocookie.com/embed/${demoReel.youtubeId}?rel=0&modestbranding=1`;
 
   return (
@@ -28,7 +27,7 @@ export default function DemoReel() {
         </div>
         <div className="flex items-center justify-between px-5 py-4 text-sm">
           <span className="font-medium text-star">{demoReel.title}</span>
-          <span className="text-star-dim">{demoReel.runtime}</span>
+          {demoReel.runtime ? <span className="text-star-dim">{demoReel.runtime}</span> : null}
         </div>
       </div>
     </Section>

@@ -24,9 +24,6 @@ export default function Headshots() {
               priority={i < 2}
               className="object-cover transition duration-500 group-hover:scale-[1.03]"
             />
-            <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-space-950/80 to-transparent px-3 pb-3 pt-10 text-xs font-medium tracking-wide text-star/90">
-              {shot.label}
-            </span>
           </li>
         ))}
       </ul>
