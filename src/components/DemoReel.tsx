@@ -8,6 +8,13 @@ export default function DemoReel() {
   return (
     <Section id="reel" eyebrow="Demo Reel" title="Demo Reel" intro={demoReel.description}>
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-space-900 shadow-[0_30px_80px_-30px] shadow-nebula/40">
+        {/* Context banner — deliberately bold and full-width so it is read before pressing play */}
+        <p
+          role="note"
+          className="border-b border-nebula/40 bg-nebula/15 px-5 py-3 text-center text-base font-bold tracking-wide text-star sm:text-lg"
+        >
+          {demoReel.note}
+        </p>
         <div className="aspect-video">
           <iframe
             className="h-full w-full"

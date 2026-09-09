@@ -48,6 +48,8 @@ export const demoReel = {
   youtubeId: "aqz-KE-bpKQ",
   title: "Anmol Singh — Demo Reel 2025",
   runtime: "2:14", // PLACEHOLDER
+  // Prominent caption shown directly above the video player
+  note: "Filmed before formal training/classes",
   description:
     "A selection of film and television work. Full scenes available on request.", // PLACEHOLDER
 };
