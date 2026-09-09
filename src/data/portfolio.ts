@@ -13,13 +13,8 @@ export const profile = {
   tagline: "Actor · Toronto",
   // PLACEHOLDER - short bio for the hero section
   bio: "Toronto-based actor working across film, television and stage. Trained in scene study and on-camera technique, with a focus on grounded, character-driven work.",
-  // PLACEHOLDER - replace with real contact email
-  email: "hello@example.com",
-  // PLACEHOLDER - replace with real social handles or remove
-  socials: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "IMDb", href: "https://www.imdb.com/" },
-  ],
+  // Shown as a mailto: link in the Contact section
+  email: "anmolactor01@yahoo.com",
   // Physical stats listed on the resume header
   stats: {
     height: "5'10\"",

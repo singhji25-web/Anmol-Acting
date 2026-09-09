@@ -22,7 +22,7 @@ grep -rn "PLACEHOLDER" src public next.config.ts
 
 | What | Where |
 | --- | --- |
-| Name, tagline, bio, email, socials, height/weight/eyes/hair | `profile` in `src/data/portfolio.ts` |
+| Name, tagline, bio, email, height/weight/eyes/hair | `profile` in `src/data/portfolio.ts` |
 | Headshots | `headshots[]` — drop JPGs into `public/headshots/`, run `node scripts/optimize-headshots.mjs`, point `src` at the `.webp` |
 | Demo reel | `demoReel.youtubeId` — the ID after `?v=` in the YouTube URL |
 | Special skills (grouped by category) | `specialSkills` |
@@ -30,10 +30,8 @@ grep -rn "PLACEHOLDER" src public next.config.ts
 | PDF resume | `public/resume.pdf` (linked from the Resume section) |
 | Site URL for social previews | `metadataBase` in `src/app/layout.tsx` |
 
-### Contact form
-The form opens the visitor's mail client with a pre-filled `mailto:` link, so there is no
-backend to maintain. To collect submissions instead, point the `<form action>` in
-`src/components/Contact.tsx` at a service like Formspree and remove the `onSubmit` handler.
+### Contact
+The Contact section is a single `mailto:` link to `profile.email` — no form and no backend.
 
 ## Deploy to Vercel (free tier)
 
