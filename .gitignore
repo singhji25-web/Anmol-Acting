@@ -44,3 +44,4 @@ next-env.d.ts
 public/headshots/*.JPG
 public/headshots/*.jpg
 public/headshots/*.jpeg
+public/headshots/*.JPEG

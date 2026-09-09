@@ -27,16 +27,19 @@ export const profile = {
 
 // -----------------------------------------------------------------------------
 // HEADSHOTS
-// Optimized WebP files in /public/headshots (1200x1500). To add more, drop the
+// Optimized WebP files in /public/headshots (max 1200x1600). To add more, drop the
 // original JPGs there and run `node scripts/optimize-headshots.mjs`.
+// `position` controls which part of the photo is kept when the grid cell crops it
+// (default: center). Use "top" for full-body shots so the head is never clipped.
 // -----------------------------------------------------------------------------
-export type Headshot = { src: string; alt: string };
+export type Headshot = { src: string; alt: string; position?: "top" | "center" };
 
 export const headshots: Headshot[] = [
   { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie" },
   { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket" },
   { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket" },
   { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie" },
+  { src: "/headshots/05.webp", alt: "Anmol Singh — full-body shot in a black baseball jersey and jeans", position: "top" },
 ];
 
 // -----------------------------------------------------------------------------
