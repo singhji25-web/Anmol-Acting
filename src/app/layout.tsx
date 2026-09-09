@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Anmol Singh — Actor · Toronto",
   description:
     "Official acting portfolio of Anmol Singh, a Toronto-based actor. Headshots, demo reel, resume, training and representation.",
-  // PLACEHOLDER - set metadataBase to the final deployed URL so social previews resolve.
+  // Deployed URL — used to resolve Open Graph / social preview links.
   metadataBase: new URL("https://anmol-acting.vercel.app"),
   openGraph: {
     title: "Anmol Singh — Actor · Toronto",
