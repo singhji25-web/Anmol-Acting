@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Section from "@/components/Section";
-import { headshots } from "@/data/portfolio";
+import { headshots, headshotsCredit } from "@/data/portfolio";
 
 /**
  * Layout for five photos:
@@ -51,6 +51,9 @@ export default function Headshots() {
           </li>
         ))}
       </ul>
+      <p className="mt-5 text-right text-xs uppercase tracking-[0.2em] text-star-dim">
+        {headshotsCredit}
+      </p>
     </Section>
   );
 }

@@ -27,7 +27,9 @@ export default function DemoReel() {
         </div>
         <div className="flex items-center justify-between px-5 py-4 text-sm">
           <span className="font-medium text-star">{demoReel.title}</span>
-          {demoReel.runtime ? <span className="text-star-dim">{demoReel.runtime}</span> : null}
+          <span className="text-star-dim">
+            {[demoReel.filmed, demoReel.runtime].filter(Boolean).join(" · ")}
+          </span>
         </div>
       </div>
     </Section>

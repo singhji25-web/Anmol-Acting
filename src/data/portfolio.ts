@@ -47,6 +47,9 @@ export const headshots: Headshot[] = [
   { src: "/headshots/05.webp", alt: "Anmol Singh — full-body shot in a black baseball jersey and jeans", position: "top" },
 ];
 
+// Small credit line shown beneath the headshot grid
+export const headshotsCredit = "Taken September 2025";
+
 // -----------------------------------------------------------------------------
 // DEMO REEL
 // `youtubeId` is the part after youtu.be/ or ?v= in the video URL.
@@ -55,6 +58,8 @@ export const demoReel = {
   youtubeId: "C-7Ho0-Tukk", // https://youtu.be/C-7Ho0-Tukk
   title: "Anmol Singh — Demo Reel",
   runtime: undefined as string | undefined, // e.g. "2:14" — shown next to the title when set
+  // When the reel was shot — shown in the bar beneath the player
+  filmed: "Filmed October 2025",
   // Prominent caption shown directly above the video player
   note: "Filmed before formal training/classes",
   description: "Full scenes available on request.",
@@ -85,8 +90,8 @@ export type Workshop = {
 };
 
 export const workshops: Workshop[] = [
-  { title: "Casting Director Workshop", instructor: "Lisa Parasyn", organization: "ActorVan Studios" },
-  { title: "Acting Classes", instructor: "Grisha", organization: "RAW Acting Studio" },
-  { title: "Acting Classes", instructor: "Jim Daugherty", organization: "Indy Actor's Academy" },
-  { title: "Acting Classes (6-Week Course)", instructor: "Caleigh Le Grand", organization: "LB Studio" },
+  { title: "Casting Director Workshop", instructor: "Lisa Parasyn", organization: "ActorVan Studios", years: "July 2026" },
+  { title: "Acting Classes", instructor: "Grisha", organization: "RAW Acting Studio", years: "April 2026" },
+  { title: "Acting Classes", instructor: "Jim Daugherty", organization: "Indy Actor's Academy", years: "August 2025" },
+  { title: "Acting Classes", instructor: "Caleigh Le Grand", organization: "LB Studio", years: "July 2026" },
 ];
