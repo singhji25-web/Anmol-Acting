@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Section from "@/components/Section";
-import { headshots, headshotsCredit } from "@/data/portfolio";
+import { headshots } from "@/data/portfolio";
 
 /**
  * Layout for five photos:
  *  - mobile: two columns; an odd final photo spans the full width
  *  - md+:    a 6-column grid — first three photos span 2 columns each (3 across),
  *            the rest span 3 columns each (2 across, slightly larger)
+ *  Each photo carries a small "taken" date label in its bottom-left corner.
  */
 function cellClasses(i: number, total: number) {
   const lastIsOrphan = total % 2 === 1 && i === total - 1;
@@ -48,12 +49,14 @@ export default function Headshots() {
                 shot.position === "top" ? "object-top" : "object-center"
               }`}
             />
+            {shot.taken && (
+              <span className="absolute bottom-2 left-2 rounded-full border border-white/10 bg-space-950/70 px-2.5 py-1 text-[0.6rem] font-medium uppercase tracking-[0.2em] text-star-dim backdrop-blur-sm sm:bottom-3 sm:left-3">
+                {shot.taken}
+              </span>
+            )}
           </li>
         ))}
       </ul>
-      <p className="mt-5 text-right text-xs uppercase tracking-[0.2em] text-star-dim">
-        {headshotsCredit}
-      </p>
     </Section>
   );
 }

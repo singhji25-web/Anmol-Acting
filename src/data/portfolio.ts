@@ -17,8 +17,8 @@ export const profile = {
   email: "anmolactor01@yahoo.com",
   // Portrait used as the large visual in the hero (one of the gallery files)
   heroImage: {
-    src: "/headshots/04.webp",
-    alt: "Anmol Singh — dramatic headshot in a leather jacket",
+    src: "/headshots/06.webp",
+    alt: "Anmol Singh — warm headshot in a patterned knit shirt against a brown backdrop",
   },
   // Physical stats listed on the resume header
   stats: {
@@ -36,19 +36,19 @@ export const profile = {
 // original JPGs there and run `node scripts/optimize-headshots.mjs`.
 // `position` controls which part of the photo is kept when the grid cell crops it
 // (default: center). Use "top" for full-body shots so the head is never clipped.
+// `taken` is shown as a small date label on the photo (e.g. "September 2026").
 // -----------------------------------------------------------------------------
-export type Headshot = { src: string; alt: string; position?: "top" | "center" };
+export type Headshot = { src: string; alt: string; position?: "top" | "center"; taken?: string };
 
 export const headshots: Headshot[] = [
-  { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie" },
-  { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket" },
-  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket" },
-  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie" },
-  { src: "/headshots/05.webp", alt: "Anmol Singh — full-body shot in a black baseball jersey and jeans", position: "top" },
+  { src: "/headshots/06.webp", alt: "Anmol Singh — warm headshot in a patterned knit shirt against a brown backdrop", taken: "September 2026" },
+  { src: "/headshots/07.webp", alt: "Anmol Singh — intense headshot in a cream ribbed polo against an olive backdrop", taken: "September 2026" },
+  { src: "/headshots/01.webp", alt: "Anmol Singh — theatrical headshot in a white shirt and tie", taken: "September 2025" },
+  { src: "/headshots/04.webp", alt: "Anmol Singh — dramatic headshot in a leather jacket", taken: "September 2025" },
+  { src: "/headshots/03.webp", alt: "Anmol Singh — three-quarter headshot in a leather jacket", taken: "September 2025" },
+  { src: "/headshots/02.webp", alt: "Anmol Singh — smiling commercial headshot in a black hoodie", taken: "September 2025" },
+  { src: "/headshots/05.webp", alt: "Anmol Singh — full-body shot in a black baseball jersey and jeans", position: "top", taken: "September 2025" },
 ];
-
-// Small credit line shown beneath the headshot grid
-export const headshotsCredit = "Taken September 2025";
 
 // -----------------------------------------------------------------------------
 // DEMO REEL
